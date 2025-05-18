@@ -1,0 +1,51 @@
+<section class="kyp-screen">
+    <div class="kyp-screen__header">
+        <div class="kyp-screen__header-title">
+            <h1 class="kyp-screen__header-title-text">Know your partner</h1>
+            <div class="kyp-screen__header-title-buttons">
+                <button class="kyp-screen__header-title-button" mat-fab extended (click)="openForceModal()">
+                    Force approve
+                </button>
+            </div>
+        </div>
+        <div class="kyp-screen__header-content">
+            @for (field of fields; track field) {
+            <div class="kyp-screen__header-content--item">
+                <p class="kyp-screen__header-content--label">{{ field.label }}</p>
+                <span class="kyp-screen__header{{ field.span }} kyp-screen__header-content--value ">{{
+                    field.value
+                    }}</span>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+
+<ng-template #forceDialog>
+    <app-modal title="Request a Document">
+        <div modal-content>
+            <h3>Develop across all platforms</h3>
+            <p>
+                Learn one way to build applications with Angular and reuse your code and
+                abilities to build apps for any deployment target. For web, mobile web,
+                native mobile and native desktop.
+            </p>
+
+            <h3>Speed Performance</h3>
+            <p>
+                Achieve the maximum speed possible on the Web Platform today, and take
+                it further, via Web Workers and server-side rendering. Angular puts you
+                in control over scalability. Meet huge data requirements by building
+                data models on RxJS, Immutable.js or another push-model.
+            </p>
+
+            <h3>Incredible tooling</h3>
+            <p>
+                Achieve the maximum speed possible on the Web Platform today, and take
+                it further, via Web Workers and server-side rendering. Angular puts you
+                in control over scalability. Meet huge data requirements by building
+                data models on RxJS, Immutable.js or another push-model.
+            </p>
+        </div>
+    </app-modal>
+</ng-template>

@@ -1,0 +1,72 @@
+.kyp-screen {
+
+    padding: 20px;
+
+  &__header {
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: rgba(128, 128, 128, 0.151) 1px solid;
+        padding: 15px 20px;
+
+      &-text {
+        margin: 0;
+      }
+
+      &-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      &-button {
+        background-color: #23306B;
+        border-radius: 8px;
+        color: #fff;
+        padding: 7px 10px;
+        max-height: 35px;
+        font-size: 14px;
+        font-weight: 500;
+        box-shadow: initial;
+      }
+      
+      &-button:hover {
+          box-shadow: initial;
+      }
+
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 16px; 
+      padding: 20px;
+
+      &--item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      &--label {  
+        color: #5A637A;
+        margin: 0;
+      }
+      
+      &--value {  
+        font-size: 14px;
+      }
+    }
+
+    &--span {
+        background-color: rgb(255 255 0 / 15%);
+        color: #D4AE3C;
+        border-radius: 5px;
+        padding: 5px 15px;
+        width: max-content;
+    }
+  }
+}

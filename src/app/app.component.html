@@ -1,0 +1,23 @@
+<main class="main">
+  <div class="header">
+    <div class="header-content">
+      <p class="header-content__lang">ES</p>
+      <p class="header-content__name">Eyal Shomo</p>
+      <span class="header-content__id">ID: 75789</span>
+    </div>
+  </div>
+  <div class="content">
+    <nav class="content-navbar">
+      <ul class="content-navbar__list">
+        @for (link of links; track link) {
+        <li class="content-navbar__item {{ link === 'KYP' ? 'content-navbar__item--active' : '' }}">
+          <a (click)="goTo(link)">{{ link }}</a>
+        </li>
+        }
+      </ul>
+    </nav>
+    <div class="content-container">
+      <router-outlet />
+    </div>
+  </div>
+</main>
